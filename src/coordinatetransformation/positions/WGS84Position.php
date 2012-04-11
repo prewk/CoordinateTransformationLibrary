@@ -20,8 +20,6 @@
 require_once dirname(__FILE__) . '/../Position.php';
 require_once dirname(__FILE__) . '/ParseException.php';
 
-mb_internal_encoding('UTF-8');
-
 abstract class WGS84Format {
   const Degrees = 0;
   const DegreesMinutes = 1;
@@ -162,7 +160,7 @@ class WGS84Position extends Position {
     $degrees = floor(abs($value));
     $minutes = (abs($value) - $degrees) * 60;
 
-    return sprintf("%s %.0fº %.0f'", $value >= 0 ? $positiveValue : $negativeValue, $degrees, floor($minutes * 10000) / 10000);
+    return str_replace('.', ',', sprintf("%s %.0Fº %.0F'", $value >= 0 ? $positiveValue : $negativeValue, $degrees, floor($minutes * 10000) / 10000));
   }
 
   private function convToDmsString($value, $positiveValue, $negativeValue) {
@@ -173,13 +171,17 @@ class WGS84Position extends Position {
     $minutes = floor((abs($value) - $degrees) * 60);
     $seconds = (abs($value) - $degrees - $minutes / 60) * 3600;
 
-    return sprintf("%s %.0fº %.0f' %.5f\"", $value >= 0 ? $positiveValue : $negativeValue, $degrees, $minutes, round($seconds * 100000) / 100000);
+    return str_replace('.', ',', sprintf("%s %.0Fº %.0F' %.5F\"", $value >= 0 ? $positiveValue : $negativeValue, $degrees, $minutes, round($seconds * 100000) / 100000));
   }
 
   private function parseValueFromDmString($value, $positiveChar) {
     $retVal = 0;
     if (isset($value)) {
       if(!empty($value)) {
+
+        $orig_enc = mb_internal_encoding();
+        mb_internal_encoding('UTF-8');
+        
         $direction = mb_substr($value, 0, 1);
         $value = trim(mb_substr($value, 1));
 
@@ -191,6 +193,8 @@ class WGS84Position extends Position {
 
         $retVal = doubleval($degree);
         $retVal += doubleval(str_replace(',', '.', $minutes)) / 60;
+        
+        mb_internal_encoding($orig_enc);
 
         if($retVal > 90) {
           $retVal = NAN;
@@ -211,6 +215,10 @@ class WGS84Position extends Position {
     $retVal = 0;
     if (isset($value)) {
       if(!empty($value)) {
+
+        $orig_enc = mb_internal_encoding();
+        mb_internal_encoding('UTF-8');
+
         $direction = mb_substr($value, 0, 1);
 
         $value = trim(mb_substr($value, 1));
@@ -225,6 +233,8 @@ class WGS84Position extends Position {
         $retVal = doubleval($degree);
         $retVal += doubleval(str_replace(',', '.', $minutes)) / 60;
         $retVal += doubleval(str_replace(',', '.', $seconds)) / 3600;
+
+        mb_internal_encoding($orig_enc);
 
         if ($retVal > 90) {
           $retVal = NAN;

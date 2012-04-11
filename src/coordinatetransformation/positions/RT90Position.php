@@ -125,6 +125,6 @@ class RT90Position extends Position {
 
   //Override
   public function __toString() {
-    return sprintf("X: %f Y: %F, Projection %s", $this->latitude, $this->longitude, $this->getProjectionString());
+    return sprintf("X: %F Y: %F, Projection %s", $this->latitude, $this->longitude, $this->getProjectionString());
   }
 }

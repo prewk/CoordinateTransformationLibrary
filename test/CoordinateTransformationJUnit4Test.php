@@ -24,10 +24,10 @@
 #import org.junit.Assert;
 #import org.junit.Test;
 //require_once '../src/coordinatetransformation/GaussKreuger.php'
-require_once '../src/coordinatetransformation/positions/RT90Position.php';
-require_once '../src/coordinatetransformation/positions/SWEREF99Position.php';
-require_once '../src/coordinatetransformation/positions/WGS84Position.php';
-require_once 'simpletest/autorun.php';
+require_once dirname(__FILE__) . '/../src/coordinatetransformation/positions/RT90Position.php';
+require_once dirname(__FILE__) . '/../src/coordinatetransformation/positions/SWEREF99Position.php';
+require_once dirname(__FILE__) . '/../src/coordinatetransformation/positions/WGS84Position.php';
+require_once dirname(__FILE__) . '/simpletest/autorun.php';
 
 class CoordinateTransformationJUnit4Test extends UnitTestCase {
 
