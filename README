@@ -1,9 +1,7 @@
 
-   CoordinateTransformationLibrary - Mathias Åhsberg 2009
+   CoordinateTransformationLibrary - David Gustafsson 2012
  
    RT90, SWEREF99 and WGS84 coordinate transformation library
- 
-  Visit my repository at http://github.com/goober
  
   This library is a PHP port of the .NET library by Björn Sållarp.
    calculations are based entirely on the excellent
