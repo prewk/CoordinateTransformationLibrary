@@ -1,19 +1,18 @@
 <?php
-// package coordinatetransformation;
-
-/** Java-implementation of "Gauss Conformal Projection
+/** PHP-implementation of "Gauss Conformal Projection
  * (Transverse Mercator), Krügers Formulas".
  * - Parameters for SWEREF99 lat-long to/from RT90 and SWEREF99
  *   coordinates (RT90 and SWEREF99 are used in Swedish maps).
  *
- *  This library is a java port of the .NET library by Björn Sållarp.
+ *  This library is a PHP port of the .NET library by Björn Sållarp.
  *  calculations are based entirely on the excellent
  *  javscript library by Arnold Andreassons.
  *
  * Source: http://www.lantmateriet.se/geodesi/
  * Source: Arnold Andreasson, 2007. http://mellifica.se/konsult
  * Source: Björn Sållarp. 2009. http://blog.sallarp.com
- * Author: Mathias Åhsberg, 2009. http://github.com/goober/
+ * Source: Mathias Åhsberg, 2009. http://github.com/goober/
+ * Author: David Gustafsson, 2012. http://github.com/david-xelera/
  * 
  * License: http://creativecommons.org/licenses/by-nc-sa/3.0/
  * */

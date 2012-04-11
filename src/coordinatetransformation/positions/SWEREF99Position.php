@@ -1,26 +1,23 @@
 <?php
 /**
- *  CoordinateTransformationLibrary - Mathias Åhsberg 2009
+ *  CoordinateTransformationLibrary - David Gustafsson 2012
  *
  *  RT90, SWEREF99 and WGS84 coordinate transformation library
  *
- * Visit my repository at http://github.com/goober
- *
- * This library is a java port of the .NET library by Björn Sållarp.
+ * This library is a PHP port of the .NET library by Björn Sållarp.
  *  calculations are based entirely on the excellent
  *  javscript library by Arnold Andreassons.
  *
  * Source: http://www.lantmateriet.se/geodesi/
  * Source: Arnold Andreasson, 2007. http://mellifica.se/konsult
  * Source: Björn Sållarp. 2009. http://blog.sallarp.com
- * Author: Mathias Åhsberg, 2009. http://github.com/goober/
+ * Source: Mathias Åhsberg, 2009. http://github.com/goober/
+ * Author: David Gustafsson, 2012. http://github.com/david-xelera/
  *
  * License: http://creativecommons.org/licenses/by-nc-sa/3.0/
  */
-//package coordinatetransformation.positions;
 
-//import coordinatetransformation.GaussKreuger;
-//import coordinatetransformation.Position;
+
 require_once dirname(__FILE__) . '/../GaussKreuger.php';
 require_once dirname(__FILE__) . '/../Position.php';
 
@@ -39,7 +36,6 @@ abstract class SWEREFProjection {
   const sweref_99_21_45 = 11;
   const sweref_99_23_1 = 12;
 }
-
 
 class SWEREF99Position extends Position {
 
@@ -153,6 +149,6 @@ class SWEREF99Position extends Position {
 
   //@Override
   public function __toString() {
-    return sprintf("N: %f E: %f Projection: %s", $this->latitude, $this->longitude, $this->getProjectionString());
+    return sprintf("N: %F E: %F Projection: %s", $this->latitude, $this->longitude, $this->getProjectionString());
   }
 }
