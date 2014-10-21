@@ -40,13 +40,8 @@ class CoordTransformTest extends PHPUnit_Framework_TestCase
   public function testWGS84ToRT90() {
     $wgsPos = null;
     $rtPos = null;
-    try {
-      $wgsPos = new WGS84Position("N 59º 58' 55.23\" E 017º 50' 06.12\"", WGS84Format::DegreesMinutesSeconds);
-      $rtPos = new RT90Position($wgsPos, RT90Projection::rt90_2_5_gon_v);
-    }
-    catch(ParseException $e) {
-      $this->fail($e->getMessage());
-    }
+    $wgsPos = new WGS84Position("N 59º 58' 55.23\" E 017º 50' 06.12\"", WGS84Format::DegreesMinutesSeconds);
+    $rtPos = new RT90Position($wgsPos, RT90Projection::rt90_2_5_gon_v);
     // Conversion values from Lantmateriet.se, they convert from DMS only.
     // Reference: http://www.lantmateriet.se/templates/LMV_Enkelkoordinattransformation.aspx?id=11500
     $xPosFromLM = 6653174.343;
