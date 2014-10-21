@@ -1,4 +1,7 @@
 <?php
+
+namespace Prewk\CoordTransform;
+
 /**
  *  CoordinateTransformationLibrary - David Gustafsson 2012
  *
@@ -16,12 +19,6 @@
  *
  * License: http://creativecommons.org/licenses/by-nc-sa/3.0/
  */
-
-abstract class Grid {
-  const RT90 = 0;
-  const WGS84 = 1;
-  const SWEREF99 = 3;
-}
 
 abstract class Position {
 

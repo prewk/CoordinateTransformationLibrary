@@ -1,4 +1,7 @@
 <?php
+
+namespace Prewk\CoordTransform;
+
 /** PHP-implementation of "Gauss Conformal Projection
  * (Transverse Mercator), Krügers Formulas".
  * - Parameters for SWEREF99 lat-long to/from RT90 and SWEREF99

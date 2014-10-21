@@ -1,4 +1,11 @@
 <?php
+
+namespace Prewk\CoordTransform\Positions;
+
+use Prewk\CoordTransform\Grid;
+use Prewk\CoordTransform\Position;
+use Prewk\CoordTransform\GaussKreuger;
+
 /**
  *  CoordinateTransformationLibrary - David Gustafsson 2012
  *
@@ -16,15 +23,6 @@
  *
  * License: http://creativecommons.org/licenses/by-nc-sa/3.0/
  */
-
-require_once dirname(__FILE__) . '/../Position.php';
-require_once dirname(__FILE__) . '/ParseException.php';
-
-abstract class WGS84Format {
-  const Degrees = 0;
-  const DegreesMinutes = 1;
-  const DegreesMinutesSeconds = 2;
-}
 
 class WGS84Position extends Position {
 

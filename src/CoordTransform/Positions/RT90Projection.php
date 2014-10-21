@@ -1,4 +1,7 @@
 <?php
+
+namespace Prewk\CoordTransform\Positions;
+
 /**
  *  CoordinateTransformationLibrary - David Gustafsson 2012
  *
@@ -17,9 +20,11 @@
  * License: http://creativecommons.org/licenses/by-nc-sa/3.0/
  */
 
-/**
- * Signals that an error has been reached unexpectedly while parsing. 
- * 
- */
-class ParseException extends Exception {
+abstract class RT90Projection {
+    const rt90_7_5_gon_v = 0;
+    const rt90_5_0_gon_v = 1;
+    const rt90_2_5_gon_v = 2;
+    const rt90_0_0_gon_v = 3;
+    const rt90_2_5_gon_o = 5;
+    const rt90_5_0_gon_o = 6;
 }

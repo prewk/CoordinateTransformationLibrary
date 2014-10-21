@@ -1,0 +1,30 @@
+{
+    "name": "prewk/coord-transform",
+    "description": "Transform coordinates between swedish RT90, SWEREF99 and WGS84",
+    "homepage": "https://github.com/prewk/CoordinateTransformationLibrary",
+    "license": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+    "authors": [
+        {
+            "name": "Arnold Andreasson",
+            "homepage": "http://mellifica.se/konsult"
+        },
+        {
+            "name": "Björn Sållarp",
+            "homepage": "http://blog.sallarp.com"
+        },
+        {
+            "name": "Mathias Åhsberg",
+            "homepage": "http://github.com/goober/"
+        },
+        {
+            "name": "David Gustafsson",
+            "homepage": "http://github.com/david-xelera/"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Prewk\\": "src"
+        }
+    }
+}
