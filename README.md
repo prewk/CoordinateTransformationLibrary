@@ -1,4 +1,4 @@
-# CoordTransform
+# CoordTransform [![Build Status](https://travis-ci.org/prewk/CoordinateTransformationLibrary.svg?branch=master)](https://travis-ci.org/prewk/CoordinateTransformationLibrary)
 
 This is a composerified version of [https://github.com/david-xelera/CoordinateTransformationLibrary](https://github.com/david-xelera/CoordinateTransformationLibrary)
 
