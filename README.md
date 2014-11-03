@@ -19,6 +19,9 @@ javscript library by Arnold Andreassons.
 
 License: [http://creativecommons.org/licenses/by-nc-sa/3.0/](http://creativecommons.org/licenses/by-nc-sa/3.0/)
 
+## Installation
+TODO
+
 ## Modifications
 I moved out some code to individual namespaced classes to enable PSR-4 autoloading. I also converted the test code to PHPUnit.
 
