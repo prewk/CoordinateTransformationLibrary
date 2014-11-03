@@ -2,7 +2,7 @@
     "name": "prewk/coord-transform",
     "description": "Transform coordinates between swedish RT90, SWEREF99 and WGS84",
     "homepage": "https://github.com/prewk/CoordinateTransformationLibrary",
-    "license": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+    "license": "CC BY-NC-SA 3.0",
     "authors": [
         {
             "name": "Arnold Andreasson",
